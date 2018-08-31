@@ -65,11 +65,17 @@ By default any scripts that you want to add/write will be mapped into the `/scri
 
 There are several sample scripts already included that I've written for local use:
 
+**SCRIPTS ARE DISABLED BY DEFAULT**
+
 | Script           | Language | Purpose                                                                                                                                                                                                                      |
 |------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | auth-room.sh     | Bash     | A quick and dirty Museek script to authorise users who have joined a room to share your private files (buddy). When they leave the room, they will also be removed from your buddy list.                                     |
 | message-users.sh | Bash     |  Quick and dirty script to send a message to anyone who has downloaded files from you.                                                                                                                                       |
 | rescan-shares.sh | Bash     | Script to rescan your shares on a schedule (i.e. Midnight) - If you have TB's of shares you don't want to be always scanning for files, so it's best to set this schedule to a time when your system will be least impacted. |
+
+**Enabling & scheduling scripts**
+
+The easiest way to run your scripts is on a cron schedule by editing `scripts/cron` and then reloading the cron service within the container (or restarting the docker container).
 
 Please add any additional scripts you've written into the repo and submit a PR so that others can also benefit!
 
