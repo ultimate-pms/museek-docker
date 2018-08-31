@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<museekd>
+  <domain id="autojoin">
+    <key id="DOWN_UNDER"/>
+  </domain>
+  <domain id="buddies">
+  </domain>
+  <domain id="buddy.shares">
+    <key id="database">/root/.museekd/config.buddyshares</key>
+  </domain>
+  <domain id="clients">
+    <key id="connectmode">passive</key>
+  </domain>
+  <domain id="clients.bind">
+    <key id="first">2234</key>
+    <key id="last">2234</key>
+  </domain>
+  <domain id="default-ticker">
+    <key id="ticker"/>
+  </domain>
+  <domain id="encoding">
+    <key id="filesystem">latin1</key>
+    <key id="network">utf-8</key>
+  </domain>
+  <domain id="interfaces">
+    <key id="password">museek</key>
+  </domain>
+  <domain id="interfaces.bind">
+    <key id="/tmp/museekd.root"/>
+    <key id="localhost:2240"/>
+  </domain>
+  <domain id="museekd">
+    <key id="version">0.3.0</key>
+  </domain>
+  <domain id="priv_rooms">
+    <key id="enable_priv_room">true</key>
+  </domain>
+  <domain id="server">
+    <key id="host">server.slsknet.org</key>
+    <key id="password"></key>
+    <key id="username"></key>
+    <key id="port">2242</key>
+  </domain>
+  <domain id="shares">
+    <key id="database">/root/.museekd/config.shares</key>
+  </domain>
+  <domain id="tickers">
+  </domain>
+  <domain id="transfers">
+    <key id="autoclear_finished_downloads">false</key>
+    <key id="autoclear_finished_uploads">false</key>
+    <key id="autoretry_downloads">true</key>
+    <key id="download-dir">/downloaded</key>
+    <key id="download_blacklist"/>
+    <key id="download_rate">0</key>
+    <key id="download_slots">0</key>
+    <key id="downloads">/root/.museekd/config.downloads</key>
+    <key id="have_buddy_shares">true</key>
+    <key id="incomplete-dir">/incomplete</key>
+    <key id="only_buddies">false</key>
+    <key id="privilege_buddies">true</key>
+    <key id="trusting_uploads">false</key>
+    <key id="upload_rate">5000</key>
+    <key id="upload_slots">10</key>
+    <key id="user_warnings">true</key>
+  </domain>
+  <domain id="userinfo">
+    <key id="image">/root/.museekd/config.image</key>
+    <key id="text"/>Hi, I'm running Museekd from: https://github.com/ultimate-pms/museek-docker -- Go check it out!</key>
+  </domain>
+</museekd>

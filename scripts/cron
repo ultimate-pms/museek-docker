@@ -1,0 +1,12 @@
+# A cron file for scheduling your scripts within the Museek docker container
+# Edit the file within the container (using crontab -e) to apply changes/updates.
+##############################################################################
+
+# Run the 'auth room' script evey minute
+*/5 * * * * bash -c 'cd /scripts; ./auth-room.sh'
+
+# Auto message users that have downloaded from me ...
+45 * * * * bash -c 'cd /scripts; ./message-users.sh'
+
+# Rescan Shares - 2:30 AM each night
+30 2 * * * bash -c 'cd /scripts; ./rescan-shares.sh'

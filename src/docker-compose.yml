@@ -1,0 +1,46 @@
+version: '2'
+
+services:
+  museek:
+    build: .
+
+    container_name: museek
+    # Uncomment if you're running docker as root
+    # privileged: true
+    restart: always
+
+    ports:
+      - 2234:2234
+      - 2235:2235
+      - 2236:2236
+      - 2237:2237
+      - 2238:2238
+      - 2239:2239
+      - 2240:2240
+      - 6081:6080
+
+    volumes:
+      # Museek Daemon config and files - Leave this as is
+      - ../data/museekd:/root/.museekd
+      - ../data/museeq:/root/.museeq
+
+      # Museek+ (front end config) - Leave this as is
+      - ../data/museekplus:/root/.config/MuseekPlus.org
+
+      # Custom tools scripts etc that we may want to run inside the container
+      # (These are scripts that you can use to automate Museek) - Leave this as is.
+      - ../scripts:/scripts
+
+      # Bring in the system's current time so we don't need to manually set the time
+      # NB: Uncomment on Windows/Mac!
+      - /etc/localtime:/etc/localtime:ro
+
+      ## Add in any local shares that you wish to map (such as sharing files etc) here
+      ## Suggest including :ro tag so that these are only Read Only (Museekd is 5+ years old without updates, who knows what could happen)
+      
+      #- /fuse/Music:/music:ro
+      #- /fuse/Film:/movies_tv:ro
+
+      # This is the Museek downloaded & incomplete directories, change them as you wish - By default soulseek is configured to save in /downloaded and /incomplete within the docker container.
+      - ./shares/downloaded:/downloaded
+      - ./shares/incomplete:/incomplete
