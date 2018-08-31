@@ -1,4 +1,4 @@
-# Museek for Docker
+# Museek for Docker (And browser access)
 ### A Soulseek based client for your headless server!
 
 ----------------------------
@@ -72,3 +72,9 @@ There are several sample scripts already included that I've written for local us
 | rescan-shares.sh | Bash     | Script to rescan your shares on a schedule (i.e. Midnight) - If you have TB's of shares you don't want to be always scanning for files, so it's best to set this schedule to a time when your system will be least impacted. |
 
 Please add any additional scripts you've written into the repo and submit a PR so that others can also benefit!
+
+## Tips, Tricks & Things to note:
+
+If you want to check/monitor searches that you're receiving from the soulseek network run: `docker logs -f museek | grep -i "Received search"`
+
+It can take up to 5-10 minutes before you start receiving searches from the Soulseek network, I have no idea why - I suspect it's something to do with being an older Soulseek client.
