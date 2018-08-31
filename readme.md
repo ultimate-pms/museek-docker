@@ -50,7 +50,11 @@ You may also want to check your logs, and make changes if there's any errors:
 docker logs -f museek
 ```
 
-**4. Log onto the Museek web client**
+**4. Configure port forwarding**
+
+Log into your router and port forward TCP:`2234` to your docker host.
+
+**5. Log onto the Museek web client**
 
 Just access: `http://<your-museek-server-ip>:6081/` in your browser!
 
